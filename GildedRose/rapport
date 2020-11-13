@@ -1,0 +1,139 @@
+
+- Étant donné un item nommé <nom>, avec une vente en <sellIn> jours et qualité <quality>
+- Lorsque la qualité de l'item est mise à jour après un jour. La vente devrait alors être <newSellIn> Et la qualité doit être <newQuality>
+
+Examples:
+---------------------------------DECISION TABLE-----------------------------------------
+| name                                      | sellIn | quality | newSellIn | newQuality |
+| +5 Dexterity Vest                         |     10 |      10 |         9 |          9 |  
+| +5 Dexterity Vest                         |     -1 |      10 |        -2 |          8 |
+| +5 Dexterity Vest                         |     10 |       0 |         9 |          0 |
+| +5 Dexterity Vest                         |     -1 |       1 |        -2 |          0 |
+| Aged Brie                                 |     20 |      10 |        19 |         11 |
+| Aged Brie                                 |     20 |      50 |        19 |         50 |
+| Sulfuras, Hand of Ragnaros                |     10 |      20 |        10 |         20 |
+| Backstage passes to a TAFKAL80ETC concert |     10 |      20 |         9 |         22 |
+| Backstage passes to a TAFKAL80ETC concert |      5 |      20 |         4 |         23 |
+| Backstage passes to a TAFKAL80ETC concert |      5 |      49 |         4 |         50 |
+| Backstage passes to a TAFKAL80ETC concert |      0 |      20 |        -1 |          0 |
+| Conjured Mana Cake                        |     10 |      20 |         9 |         18 |
+| Conjured Mana Cake                        |     10 |       1 |         9 |          0 |
+-----------------------------------------------------------------------------------------
++5 Dexterity Vest: sellin-1 mais quality-1 >=0
+----------------------------------------------
+
+10-1 = 9 ; 10-1=9
+-1-1=-2 ; 10-2=8
+10-1=9; 0-0=0
+-1-1=-2 ; 1-1=0
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+Aged Brie : sellin-1 mais quality+1 et quality <= 50
+----------------------------------------------------
+
+-1-1=-2  ; 10+1=11  
+20-1=19 ; 50-0=50 
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+Sulfuras, Hand of Ragnaros : le produit légendaire: sellin-0 et quality-0 => ne change jamais
+---------------------------------------------------------------------------------------------
+10-0 = 10 ; 20-0=20
+--------------------------------------------------------------------------------------------------------------------------------------------
+Backstage passes to a TAFKAL80ETC concert: sellin-1 , quality+1 , quality+2...,etc. mais quand la qualité arrive à 20, le produit expire et vaut 0.
+--------------------------------------------------------------------------------------------------------------------------------------------
+10-1 = 9 ; 20+2=22
+5-1=4; 20+3=23
+5-1=4; 49+1=50
+0-1=-1;  20-20=0
+--------------------------------------------------------------------------------------------------------------------------------------------
+Conjured Mana Cake: sellin-1 et quality-1, quality-2
+-------------------------------------------------------
+10-1 =9; 20-2=18
+10-1=9; 1-1=0
+
+Aged Brie, -2, 1 <== , Aged Brie, -1, -1
+Aged Brie, -2, 2 <== , Aged Brie, -1, 0
+Aged Brie, -2, 3 <== , Aged Brie, -1, 1
+Aged Brie, -2, 12 <== , Aged Brie, -1, 10
+Aged Brie, -1, 1 <== , Aged Brie, 0, -1
+Aged Brie, -1, 2 <== , Aged Brie, 0, 0
+Aged Brie, -1, 3 <== , Aged Brie, 0, 1
+Aged Brie, -1, 12 <== , Aged Brie, 0, 10
+Aged Brie, 0, 0 <== , Aged Brie, 1, -1
+Aged Brie, 0, 1 <== , Aged Brie, 1, 0
+Aged Brie, 0, 2 <== , Aged Brie, 1, 1
+Aged Brie, 0, 11 <== , Aged Brie, 1, 10
+Aged Brie, 9, 0 <== , Aged Brie, 10, -1
+Aged Brie, 9, 1 <== , Aged Brie, 10, 0
+Aged Brie, 9, 2 <== , Aged Brie, 10, 1
+Aged Brie, 9, 11 <== , Aged Brie, 10, 10
+
+normal item, -2, -1 <== , normal item, -1, -1
+normal item, -2, 0 <== , normal item, -1, 0
+normal item, -2, 0 <== , normal item, -1, 1
+normal item, -2, 8 <== , normal item, -1, 10
+normal item, -1, -1 <== , normal item, 0, -1
+normal item, -1, 0 <== , normal item, 0, 0
+normal item, -1, 0 <== , normal item, 0, 1
+normal item, -1, 8 <== , normal item, 0, 10
+normal item, 0, -1 <== , normal item, 1, -1
+normal item, 0, 0 <== , normal item, 1, 0
+normal item, 0, 0 <== , normal item, 1, 1
+normal item, 0, 9 <== , normal item, 1, 10
+normal item, 9, -1 <== , normal item, 10, -1
+normal item, 9, 0 <== , normal item, 10, 0
+normal item, 9, 0 <== , normal item, 10, 1
+normal item, 9, 9 <== , normal item, 10, 10
+
+
+
+Backstage passes to a TAFKAL80ETC concert, -2, 0 <== , Backstage passes to a TAFKAL80ETC concert, -1, -1
+Backstage passes to a TAFKAL80ETC concert, -2, 0 <== , Backstage passes to a TAFKAL80ETC concert, -1, 0
+Backstage passes to a TAFKAL80ETC concert, -2, 0 <== , Backstage passes to a TAFKAL80ETC concert, -1, 1
+Backstage passes to a TAFKAL80ETC concert, -2, 0 <== , Backstage passes to a TAFKAL80ETC concert, -1, 10
+Backstage passes to a TAFKAL80ETC concert, -1, 0 <== , Backstage passes to a TAFKAL80ETC concert, 0, -1
+Backstage passes to a TAFKAL80ETC concert, -1, 0 <== , Backstage passes to a TAFKAL80ETC concert, 0, 0
+Backstage passes to a TAFKAL80ETC concert, -1, 0 <== , Backstage passes to a TAFKAL80ETC concert, 0, 1
+Backstage passes to a TAFKAL80ETC concert, -1, 0 <== , Backstage passes to a TAFKAL80ETC concert, 0, 10
+Backstage passes to a TAFKAL80ETC concert, 0, 2 <== , Backstage passes to a TAFKAL80ETC concert, 1, -1
+Backstage passes to a TAFKAL80ETC concert, 0, 3 <== , Backstage passes to a TAFKAL80ETC concert, 1, 0
+Backstage passes to a TAFKAL80ETC concert, 0, 4 <== , Backstage passes to a TAFKAL80ETC concert, 1, 1
+Backstage passes to a TAFKAL80ETC concert, 0, 13 <== , Backstage passes to a TAFKAL80ETC concert, 1, 10
+Backstage passes to a TAFKAL80ETC concert, 4, 2 <== , Backstage passes to a TAFKAL80ETC concert, 5, -1
+Backstage passes to a TAFKAL80ETC concert, 4, 3 <== , Backstage passes to a TAFKAL80ETC concert, 5, 0
+Backstage passes to a TAFKAL80ETC concert, 4, 4 <== , Backstage passes to a TAFKAL80ETC concert, 5, 1
+Backstage passes to a TAFKAL80ETC concert, 4, 13 <== , Backstage passes to a TAFKAL80ETC concert, 5, 10
+Backstage passes to a TAFKAL80ETC concert, 5, 1 <== , Backstage passes to a TAFKAL80ETC concert, 6, -1
+Backstage passes to a TAFKAL80ETC concert, 5, 2 <== , Backstage passes to a TAFKAL80ETC concert, 6, 0
+Backstage passes to a TAFKAL80ETC concert, 5, 3 <== , Backstage passes to a TAFKAL80ETC concert, 6, 1
+Backstage passes to a TAFKAL80ETC concert, 5, 12 <== , Backstage passes to a TAFKAL80ETC concert, 6, 10
+Backstage passes to a TAFKAL80ETC concert, 9, 1 <== , Backstage passes to a TAFKAL80ETC concert, 10, -1
+Backstage passes to a TAFKAL80ETC concert, 9, 2 <== , Backstage passes to a TAFKAL80ETC concert, 10, 0
+Backstage passes to a TAFKAL80ETC concert, 9, 3 <== , Backstage passes to a TAFKAL80ETC concert, 10, 1
+Backstage passes to a TAFKAL80ETC concert, 9, 12 <== , Backstage passes to a TAFKAL80ETC concert, 10, 10
+Backstage passes to a TAFKAL80ETC concert, 10, 0 <== , Backstage passes to a TAFKAL80ETC concert, 11, -1
+Backstage passes to a TAFKAL80ETC concert, 10, 1 <== , Backstage passes to a TAFKAL80ETC concert, 11, 0
+Backstage passes to a TAFKAL80ETC concert, 10, 2 <== , Backstage passes to a TAFKAL80ETC concert, 11, 1
+Backstage passes to a TAFKAL80ETC concert, 10, 11 <== , Backstage passes to a TAFKAL80ETC concert, 11, 10
+
+
+Sulfuras, Hand of Ragnaros, -1, -1 <== , Sulfuras, Hand of Ragnaros, -1, -1
+Sulfuras, Hand of Ragnaros, -1, 0 <== , Sulfuras, Hand of Ragnaros, -1, 0
+Sulfuras, Hand of Ragnaros, -1, 1 <== , Sulfuras, Hand of Ragnaros, -1, 1
+Sulfuras, Hand of Ragnaros, -1, 50 <== , Sulfuras, Hand of Ragnaros, -1, 50
+Sulfuras, Hand of Ragnaros, -1, 51 <== , Sulfuras, Hand of Ragnaros, -1, 51
+Sulfuras, Hand of Ragnaros, 0, -1 <== , Sulfuras, Hand of Ragnaros, 0, -1
+Sulfuras, Hand of Ragnaros, 0, 0 <== , Sulfuras, Hand of Ragnaros, 0, 0
+Sulfuras, Hand of Ragnaros, 0, 1 <== , Sulfuras, Hand of Ragnaros, 0, 1
+Sulfuras, Hand of Ragnaros, 0, 50 <== , Sulfuras, Hand of Ragnaros, 0, 50
+Sulfuras, Hand of Ragnaros, 0, 51 <== , Sulfuras, Hand of Ragnaros, 0, 51
+Sulfuras, Hand of Ragnaros, 1, -1 <== , Sulfuras, Hand of Ragnaros, 1, -1
+Sulfuras, Hand of Ragnaros, 1, 0 <== , Sulfuras, Hand of Ragnaros, 1, 0
+Sulfuras, Hand of Ragnaros, 1, 1 <== , Sulfuras, Hand of Ragnaros, 1, 1
+Sulfuras, Hand of Ragnaros, 1, 50 <== , Sulfuras, Hand of Ragnaros, 1, 50
+Sulfuras, Hand of Ragnaros, 1, 51 <== , Sulfuras, Hand of Ragnaros, 1, 51
+Sulfuras, Hand of Ragnaros, 10, -1 <== , Sulfuras, Hand of Ragnaros, 10, -1
+Sulfuras, Hand of Ragnaros, 10, 0 <== , Sulfuras, Hand of Ragnaros, 10, 0
+Sulfuras, Hand of Ragnaros, 10, 1 <== , Sulfuras, Hand of Ragnaros, 10, 1
+Sulfuras, Hand of Ragnaros, 10, 50 <== , Sulfuras, Hand of Ragnaros, 10, 50
+Sulfuras, Hand of Ragnaros, 10, 51 <== , Sulfuras, Hand of Ragnaros, 10, 51

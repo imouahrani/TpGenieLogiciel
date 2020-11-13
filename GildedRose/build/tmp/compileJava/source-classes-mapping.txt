@@ -1,0 +1,10 @@
+com/gildedrose/GildedRose.java
+ com.gildedrose.GildedRose
+ com.gildedrose.GildedRose$1
+ com.gildedrose.GildedRose$BackstagePass
+ com.gildedrose.GildedRose$Cheese
+ com.gildedrose.GildedRose$Conjured
+ com.gildedrose.GildedRose$ItemCategory
+ com.gildedrose.GildedRose$Legendary
+com/gildedrose/Item.java
+ com.gildedrose.Item

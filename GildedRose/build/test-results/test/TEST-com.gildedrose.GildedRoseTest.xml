@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.gildedrose.GildedRoseTest" tests="48" skipped="0" failures="0" errors="0" timestamp="2020-09-27T10:41:43" hostname="user" time="0.132">
+  <properties/>
+  <testcase name="qualityOf0Stays0whenSellinPassed()" classname="com.gildedrose.GildedRoseTest" time="0.034"/>
+  <testcase name="qualityOf51Becomes50whileInSellin()" classname="com.gildedrose.GildedRoseTest" time="0.004"/>
+  <testcase name="qualityDecreases()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="updateQuality_withElixir_should_sellInMinusOne_and_qualityMinusOne()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="backstagePassesIncreasesQualityBy3When5daysFromSellinUnless50()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="agedBrieIncreasesQualityWhenOlder()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="conjuredItemsDegradeTwiceAsFastAfterSellinUntilZero()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="testSulfurasNeverChanges()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="conjuredItemsDegradeTwiceAsFastBeforeSellin()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="updateQuality_withBackstageConcert_should_sellIn_Minus1_and_quality_Plus1()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="testAgedBrieIncreasesQualityWithAge()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="testBackstagePassIncreasesQualityByThreeIfSellBySmallerThanFive()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="updateQuality_withBackstageConcert_withSellIn1_should_sellIn_Minus1_and_quality_Plus3()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="qualityOf50Becomes49whileInSellin()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="updateQuality_withElixir_outOfTheDate_should_sellIn_Minus1_and_quality_Zero()" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
+  <testcase name="testThatQualityIsNeverNegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="qualityDecreasesFasterAfterSellInDateExpired()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="updateQuality_withAgedBrie_should_sellInMinusOne_and_qualityPlusOne()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="testThatSellInValueIsDecreased()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="qualityAndSellinOfSulfurasNeverDescrease()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="testBackstagePassLosesValueAfterSellByPasses()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="backstagePassesIncreasesQualityBy2When10daysFromSellinUnless50()" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
+  <testcase name="conjuredItemsDegradeTwiceAsFastAfterSellin()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="testThatQualityDecreasesTwiceAsMuchWhenSellByIsPassed()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="updateQuality_withSulfuras_should_sellIn_Same_and_quality_80()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="agedBrieIncreasesQualityTwiceAfterSellin()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="updateQuality_withBackstageConcert_withSellIn10_should_sellIn_Minus1_and_quality_Max50()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="updateQuality_withBackstageConcert_withSellIn10_should_sellIn_Minus1_and_quality_Plus2()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="testBackstagePassIncreasesQualityByTwoIfSellBySmallerThanTen()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="updateQuality_withElixir_outOfTheDate_should_sellIn_Minus1_and_quality_Minus2()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="qualityOf50Becomes48whenSellinPassed()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="testBackstagePassIncreasesQualityByOneIfSellByGreaterThenTen()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="updateQuality_withAgedBrie_outOfTheDate_should_sellIn_Minus1_and_quality_Plus2()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="updateQuality_withBackstageConcert_withSellIn5_should_sellIn_Minus1_and_quality_Max50()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="updateQuality_withBackstageConcert_withSellIn5_should_sellIn_Minus1_and_quality_Plus3()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="backstagePassesIncreasesQualityBy3When5daysFromSellin()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="backstagePassesDromsQualityTo0AfterConcert()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="backstagePassesIncreasesQualityBy2When10daysFromSellin()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="testThatQualityValueIsDecreased()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="updateQuality_withConjured_should_sellIn_Minus1_and_quality_Minus4()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="sellInDateDecreases_butQualityCannotBeNegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="testQualityNeverIncreasesPastFifty()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="qualityIsNeverOver50()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="sellinLowersEachDay()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="updateQuality_withBackstageConcert_outOfTheDate_should_sellIn_Minus1_and_quality_0()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="nameStaysTheSameWhenUpdatingQuality()" classname="com.gildedrose.GildedRoseTest" time="0.012"/>
+  <testcase name="updateQuality_withDexterity_should_sellInMinusOne_and_qualityMinusOne()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="qualityOf0Stays0whileSellin()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

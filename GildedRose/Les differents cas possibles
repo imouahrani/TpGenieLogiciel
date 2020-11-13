@@ -1,0 +1,162 @@
+----------------------------------------------  TESTS ----------------------------------------------
+                                              --------
+
+
+
+                                               -------------- SELLIN --------------
+sellin diminue chaque jour ()
+tester que la valeur de SellIn est diminuée ()
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                -------------- QUALITY --------------
+
+tester que la valeur de qualité est diminuée ()
+tester que la qualité diminue deux fois plus lorsque la vente est réussie ()
+tester que la qualité n'est jamais négative ()
+La qualité du test n'augmente jamais au-delà de cinquante ()
+le nom reste le même lors de la mise à jour de la qualité ()
+la qualité n'est jamais supérieure à 50 ()
+La date de vente diminue mais la qualité ne peut pas être négative ()
+Baisse de la qualité ()
+la qualité diminue plus rapidement après l'expiration de la date de vente ()
+mise à jour La qualité avec dextérité devrait se vendre In Minus One et la qualité Minus One ()
+mise à jour La qualité avec invoquée devrait se vendre en moins 1 et la qualité moins 4 ()
+---------------------------------------------
+Aged Brie
+---------
+test Le Brie âgé augmente la qualité avec l'âge ()
+Le brie vieilli augmente la qualité quand il est plus âgé ()
+mise à jour La qualité avec le brie âgé devrait se vendreIn Minus One et la qualité Plus One ()
+mise à jour La qualité avec le Brie âgé hors de la date devrait se vendreEn moins 1 et la qualité Plus 2 ()
+
+---------------------------------------------
+Backstage Concert
+-----------------
+La mise à jour qualité avec Backstage Concert avec pris de vente 1 devrait se vendre moins de 1 et quality Plus 3 ()
+mise à jour La qualité avec Backstage Concert hors de la date devrait se vendreEn moins 1 et la qualité 0 ()
+mise à jour La qualité avec Backstage Concert devrait se vendre en moins 1 et en qualité Plus 1 ()
+
+---------------------------------------------
+Backstage Pass
+--------------
+test Backstage Pass augmente la qualité de un si la vente est supérieure à ThenTen ()
+Test Backstage Pass augmente la qualité de deux si la vente est inférieure à dix ()
+test Backstage Pass augmente la qualité de trois si la vente est inférieure à cinq ()
+backstage passe la qualité de la batterie à 0 après le concert ()
+test Backstage Pass perd de la valeur après la vente par pass ()
+
+---------------------------------------------
+Sulfarus
+--------
+mise à jour La qualité avec Sulfuras devrait se vendre en même temps et la qualité 80 ()
+tester Sulfuras ne change jamais ()
+---------------------------------------------
+Elixir
+-----
+mise à jour La qualité avec Elixir devrait se vendre In Minus One et la qualité Minus One ()
+mise à jour La qualité avec Elixir hors de la date devrait se vendre en moins 1 et la qualité moins 2 ()
+Mettre à jour la qualité avec Elixir hors de la date devrait se vendre en moins1 et la qualité zéro ()
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+                                    -------------- SELLIN & QUALITY --------------
+qualité de 0 reste 0 lorsque Sellin passe ()   
+qualité de 0 reste 0 pendant que Sellin ()
+qualité de 50 devient 48 lorsque Sellin passe ()
+qualité de 50 devient 49 à Sellin ()
+qualité de 51 devient 50 à Sellin ()
+
+---------------------------------------------
+Backstage Concert
+---------
+mise à jour La qualité avec Backstage Concert avec SellIn 10 devrait se vendreIn Minus1 et la qualité Max 50 ()
+mise à jour La qualité avec Backstage Concert avec SellIn 10 devrait se vendreIn Minus 1 et Quality Plus 2
+mise à jour La qualité avec Backstage Concert avec SellIn 5 devrait se vendreEn moins 1 et la qualité Plus 3 ()
+mise à jour La qualité avec Backstage Concert avec SellIn 5 devrait se vendreIn Minus 1 et la qualité M mise à jour La qualité avec Backstage Concert avec SellIn 5 devrait se vendreEn Minus1 et la qualité Max50 () ax50 ()
+
+---------------------------------------------
+Sulfarus
+--------
+la qualité et la selline des sulfures ne diminuent jamais ()
+---------------------------------------------
+Brie
+----
+Le brie vieilli augmente la qualité deux fois après Sellin ()
+
+---------------------------------------------
+Backstage Passes
+---------------
+Backstage Passes augmente la qualité de 2 à 10 jours de Sellin ()
+Backstage Passes augmente la qualité de 2 à 10 jours de Sellin à moins de 50 ()
+Backstage Passes augmente la qualité de 3 à 5 jours de Sellin ()
+Backstage Passes augmente la qualité de 3 à 5 jours de Sellin à moins de 50 ()
+
+Conjured Items 
+--------------                                
+Les objets invoqués se dégradent deux fois plus vite avant la vente ()
+Les objets invoqués se dégradent deux fois plus vite après la vente ()
+Les objets invoqués se dégradent deux fois plus vite après la vente jusqu'à zéro ()
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+----- Les méthodes -----
+conjured Items Degrade Twice As Fast Before Sellin() 
+conjured Items Degrade Twice As Fast After Sellin()
+conjured Items Degrade Twice As Fast After Sellin Until Zero()
+
+test That SellIn ValueIs Decreased()
+test That Quality ValueIs Decreased()
+test That Quality Decreases Twice As Much When Sell By Is Passed()
+test That Quality Is Never Negative()
+ test Aged Brie Increases Quality With Age()
+test  Quality Never Increases Past Fifty()
+test Sulfuras Never Changes()
+test Backstage Pass Increases Quality By One If Sell By Greater ThenTen()
+ test Backstage Pass Increases Quality By Two If Sell By Smaller Than Ten()
+test Backstage Pass Increases Quality By Three If Sell By Smaller Than Five()
+test Backstage Pass Loses Value After Sell By Passes()
+name Stays The Same When Updating Quality()
+quality Of 0 Stays 0 when Sellin Passed()
+quality Of 0 Stays 0 while Sellin()
+quality Of 50 Becomes 48 when Sellin Passed()
+quality Of 50 Becomes 49 while In Sellin()
+sellin Lowers Each Day()
+quality Of 51 Becomes 50 while In Sellin()
+quality And Sellin Of Sulfuras Never Descrease()
+aged Brie Increases Quality When Older()
+aged Brie Increases Quality Twice After Sellin()
+quality Is Never Over 50() 
+backstage Passes Increases Quality By 2 When 10 days From Sellin()
+backstage Passes Increases Quality By 2 When 10 days From Sellin Unless 50()
+backstage Passes Increases Quality By 3 When 5 days From Sellin()
+backstage Passes Increases Quality By 3 When 5 days From Sellin Unless 50()
+backstage Passes Droms Quality To 0 After Concert()
+conjured Items Degrade Twice As Fast After Sellin Until Zero()
+sellIn Date Decreases but Quality Cannot Be Negative()
+quality Decreases() 
+
+quality Decreases Faster After SellIn Date Expired()
+update Quality with Dexterity should sellIn Minus One and quality Minus One ()
+ update Quality with Sulfuras should sellIn Same and quality 80()
+update Quality with Elixir should sellIn Minus One and quality Minus One()
+update Quality with Elixir out Of The Date should sellIn Minus1 and quality Minus 2()
+update Quality with Aged Brie should sellIn Minus One and quality Plus One()
+ update Quality with Elixir out Of The Date should sellIn Minus1 and quality Zero()
+update Quality with Backstage Concert with SellIn 5 should sellIn Minus 1 and quality M update Quality with Backstage Concert with SellIn 5 should sellIn Minus1 and quality Max50()
+
+update Quality with Aged Brie out Of The Date should sellIn Minus 1 and quality Plus 2()
+update Quality with Backstage Concert out Of The Date should sellIn Minus 1 and quality 0 ()
+update Quality with Backstage Concert should sellIn Minus 1 and quality Plus 1()
+update Quality with Backstage Concert with SellIn 10 should sellIn Minus1 and quality Max 50()
+update Quality with Backstage Concert with SellIn 10 should sellIn Minus 1 and quality Plus 2
+update Quality with Backstage Concert with SellIn 5 should sellIn Minus 1 and quality Plus 3() 
+update Quality with Backstage Concert with SellIn 1 should sellIn Minus1 and quality Plus 3()
+update Quality with Conjured should sellIn Minus 1 and quality Minus 4()
+
+
+
+
+
